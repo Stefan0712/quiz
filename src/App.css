@@ -1,38 +1,287 @@
-.App {
+
+.navbar-nav{
+  margin-left: auto;
+}
+.test{
+  background-color: red;
+}
+.show-flex{
+  display: flex;
+}
+.hidden{
+  display: none !important;
+}
+.white-text{
+  color: white;
+}
+.gryffindor-hat{
+  background: url('./imgs/gryffindor.gif') center center no-repeat;
+  background-size: cover;
+}
+.slytherin-hat{
+  background: url('./imgs/slytherin.gif') center center no-repeat;
+  background-size: cover;
+}
+.hufflepuff-hat{
+  background: url('./imgs/hufflepuff.gif') center center no-repeat;
+  background-size: cover;
+}
+.ravenclaw-hat{
+  background: url('./imgs/ravenclaw.gif') center center no-repeat;
+  background-size: cover;
+}
+.idle-hat{
+  background: url('./imgs/idle-hat.gif') center center no-repeat;
+  background-size: cover;
+}
+.happy-hat{
+  background: url('./imgs/happy-hat.gif') center center no-repeat;
+  background-size: cover;
+}
+.angry-hat{
+  background: url('./imgs/angry-hat.gif') center center no-repeat;
+  background-size: cover;
+}
+/* footer css */
+footer{
+  width: 100%;
+  background-color: #212529;
+  color: darkgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  position: absolute;
+  bottom: 0px;
+  height: 50px;
+  
+}
+footer p{
+  margin: 0px;
+}
+/* homepage css */
+
+.home-page{
+  width: 100vw;
+  height: calc(100vh - 75px);
+  background: url('.//imgs/home-bg.jpg') center center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.home-page .title-1{
+  font-size: 60px;
   text-align: center;
+  color: white;
+  -webkit-text-stroke: 1px black;
+}
+.home-page .subtitle-1{
+  font-size: 50px;
+  -webkit-text-stroke: 1px black;
+}
+.home-page .start-quiz-btn{
+  margin-top: 50px;
+  width: 250px;
+  height: 100px;
+  background-color: rgba(44, 43, 43, 0.637);
+  color: white;
+  font-size: 30px;
+  border: 2px solid rgb(6, 107, 110);
+}
+.start-quiz-btn:hover{
+  border: 2px solid rgb(9, 89, 92);
+  background-color: rgba(88, 86, 86, 0.637);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* quiz page css */
+.quiz-page{
+  width: 100vw;
+  height: calc(100vh - 75px);
+  background: url('./imgs/quiz-bg.jpg') center center no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  
+}
+.quiz-page .hat-container{
+  width: 300px;
+  height: 300px;
+  background-size: contain;
+  background-color: #21252986;
+  border-radius: 10px;
+  margin-top: 50px;
+  border: 2px solid rgb(60, 185, 185);
+}
+
+.quiz{
+  width: 80%;
+  max-width: 500px;
+  min-height: 350px;
+  border: 2px solid rgb(60, 185, 185);
+  margin-top: 50px;
+  border-radius: 20px;
+}
+
+/* quiz container css */
+
+.quiz-body{
+  min-height: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.quiz-body .answers{
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.quiz-body .quiz-btn{
+  height: 100px;
+  background-color: rgba(44, 43, 43, 0.637);
   color: white;
+  font-size: 20px;
+  border: 2px solid rgb(6, 107, 110);
+}
+.quiz-body .quiz-btn:hover{
+  background-color: rgba(134, 133, 133, 0.637);
+}
+.quiz-body .quiz-btn:active{
+  background-color: rgba(6, 106, 110, 0.753);
+  border: 2px solid rgb(18, 129, 133);
 }
 
-.App-link {
-  color: #61dafb;
+.quiz-body .question{
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  color: lightgray;
+  font-size: 30px;
+  text-align: center;
+  padding: 10px 0px;
+  background-color: #05090eb9;
+  min-height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quiz-body .progress-bar-container{
+  padding: 10px 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  
+}
+.quiz-body .progress-bar-container .progress{
+  width: 90%;
+  
+}
+.quiz-body .progress-bar-container .progress .progress-bar{
+  background-color: rgba(6, 106, 110, 0.753);
+}
+.result-body{
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #212529b4;
+  padding: 30px 75px;
+  text-align: center;
+  height: 100%;
+  border-radius: 20px;
+}
+.result-body p{
+  font-size: 20px;
+  font-weight: bold;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* about css */
+
+
+
+
+/*contact css */
+.contact-page{
+  height: calc(100vh - 50px - 50px);
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+.contact-page .blurred-bg{
+  background: url('./imgs/castle-bg.jpg') center center no-repeat;
+  background-size: cover;
+  filter: blur(5px);
+  height: calc(100vh - 90px);
+  position: absolute;
+  width: 101vw;
+  z-index: -5;
+}
+.contact-page .contact-section{
+  background-color: #212529af;
+  height: 250px;
+  border-radius: 10px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+}
+.contact-page .contact-section h1{
+  background-color: #212529;
+  width: 100%;
+  border-radius: 10px;
+  padding: 5px 20px;
+  font-size: 30px;
+  
+}
+.contact-page .contact-section .date{
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+.socials{
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: 25px;
+}
+.socials-btn{
+  margin: 10px 20px;
+  
+}
+#facebook-btn{
+  background: url('./imgs/facebook-dark.png') center center no-repeat;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  transition: all 0.2s;
+}
+#facebook-btn:hover{
+  background: url('./imgs/facebook.png') center center no-repeat;
+  background-size: cover;
+  transform: scale(1.1);
+  transition: all 0.2s;
+}
+#instagram-btn{
+  background: url('./imgs/instagram-dark.png') center center no-repeat;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  transition: all 0.2s;
+}
+#instagram-btn:hover{
+  background: url('./imgs/instagram.png') center center no-repeat;
+  background-size: cover;
+  transform: scale(1.1);
+  transition: all 0.2s;
 }
