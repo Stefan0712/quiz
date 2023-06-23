@@ -146,7 +146,6 @@ let score = 0;
 
 
 const handleAnswer = (chosenAns, correctAns) =>{
-    console.log(chosenAns,correctAns)
     if(chosenAns===correctAns){
         startGame();
         score++;
