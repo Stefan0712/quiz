@@ -22,7 +22,7 @@ fetch('https://api.ipify.org?format=json')
 
  
 const getLocation = (ipAddress)=>{
-    fetch(`http://api.ipstack.com/${ipAddress}?access_key=17384e4ec087a83e18b794d529f8e65f&format=1`)
+    fetch(`https://api.ipstack.com/${ipAddress}?access_key=17384e4ec087a83e18b794d529f8e65f&format=1`)
         .then(response => response.json())
         .then(data => {
           // Access the geolocation data and extract the desired information
